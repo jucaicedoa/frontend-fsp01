@@ -1,1 +1,61 @@
-<p>usuarios works!</p>
+<div class="usuarios-container">
+  <h1 class="titulo">Gestión de Usuarios</h1>
+  <div class="contenedor">
+    <form (ngSubmit)="guardarUsuario()" class="formulario">
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input
+          id="nombre"
+          name="nombre"
+          type="text"
+          [(ngModel)]="nuevo.nombre"
+          placeholder="Nombre del usuario"
+          required
+        />
+      </div>
+
+      <div class="campo">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          [(ngModel)]="nuevo.email"
+          placeholder="Correo electrónico"
+          required
+        />
+      </div>
+
+      <div class="acciones-formulario">
+        <button type="submit" class="btn btn-primario">
+          {{ editando ? "Actualizar" : "Agregar" }}
+        </button>
+        <button
+          *ngIf="editando"
+          type="button"
+          (click)="cancelarEdicion()"
+          class="btn btn-secundario"
+        >
+          Cancelar
+        </button>
+      </div>
+    </form>
+
+    <ul class="lista-usuarios">
+      <li *ngFor="let u of usuarios" class="usuario">
+        <div class="info-usuario">
+          <strong>{{ u.nombre }}</strong>
+          <span>{{ u.email }}</span>
+        </div>
+        <div class="acciones-usuario">
+          <button (click)="editarUsuario(u)" class="btn btn-warning">
+            Editar
+          </button>
+          <button (click)="eliminarUsuario(u.id!)" class="btn btn-danger">
+            Eliminar
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
