@@ -1,0 +1,111 @@
+.usuarios-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.contenedor {
+  width: 500px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.formulario .campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.formulario .campo label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.formulario .campo input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.acciones-formulario {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.lista-usuarios {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.usuario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+.info-usuario strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.info-usuario span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.acciones-usuario {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-primario {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-secundario {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
